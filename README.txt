@@ -10,7 +10,7 @@ This application is built with Streamlit and integrates various APIs including O
 
 The app requires API keys for OpenAI, Diet, and Workout services. These keys have been securely stored in the Streamlit app settings under the 'Secrets' field.
 
-The app code is hosted on github --> https://github.com/aditya44-putta/openai-streamlit
+The app code is hosted on github --> https://github.com/aditya44-putta/diet-workout-recom
 
 Steps to run the app
 	1) Enter this URL in the web browser --> https://diet-workout-recom-ap2a8tv5y.streamlit.app/
