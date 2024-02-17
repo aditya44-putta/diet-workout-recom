@@ -13,6 +13,6 @@ The app requires API keys for OpenAI, Diet, and Workout services. These keys hav
 The app code is hosted on github --> https://github.com/aditya44-putta/openai-streamlit
 
 Steps to run the app
-	1) Enter this URL in the web browser --> https://openai-app-dtgfnrozkz.streamlit.app/
+	1) Enter this URL in the web browser --> https://diet-workout-recom-ap2a8tv5y.streamlit.app/
 	2) Input your data or make selection from the dropdown menus and don't forget to press Enter key after selecting from the dropdown also.
 	3) Click the 'Get Recommendations' button to receive your personalized diet and workout plan.
