@@ -4,7 +4,7 @@ import os
 import requests
 
 client = OpenAI(
-    api_key = "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"   
+    api_key = ""   
     #api_key= os.environ["openai_key"]
 )
 
@@ -30,11 +30,11 @@ def fetch_nutrition_data(food_allergies, diet_restriction):
         "diet": diet_restriction,
 
         # "apiKey": os.environ["nutri_key"]
-        "apiKey": "2c1437f2604e4a1cb4baa3c1d13516ab"
+        "apiKey": ""
     }
 
     # headers = {"Authorization": os.environ["nutri_key"]}
-    headers = {"Authorization": "2c1437f2604e4a1cb4baa3c1d13516ab"}
+    headers = {"Authorization": ""}
 
     try:
         response = requests.get(API_ENDPOINT, headers=headers, params=params)
@@ -49,7 +49,7 @@ def fetch_workout_data(muscle, difficulty):
     api_url = f'https://api.api-ninjas.com/v1/exercises?muscle={muscle}&difficulty={difficulty}'
 
     # api_key = os.environ["workout_key"]
-    api_key = "vaGJGuF87pPY5trluGWJQn8bvtaX2C8g65AiSPF6"
+    api_key = ""
 
     # Make the GET request to the API
     response = requests.get(api_url, headers={'X-Api-Key': api_key})
