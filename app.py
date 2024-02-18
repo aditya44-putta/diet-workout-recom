@@ -4,9 +4,10 @@ import os
 import requests
 
 client = OpenAI(
-   
-    api_key= os.environ["openai_key"]
+    api_key = "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"   
+    #api_key= os.environ["openai_key"]
 )
+
 
 st.title('Fitness and Diet Recommendation Bot')
 
@@ -15,7 +16,7 @@ age = st.number_input("Age", min_value=0, max_value=100)
 gender = st.selectbox("Gender", ["Male", "Female", "Other"])
 weight = st.number_input("Weight (kgs)", min_value=0)
 height = st.number_input("Height (cm)", min_value=0)
-goal = st.selectbox("Fitness Goal", ["Weight Loss (not an exercise)", "Muscle Gain", "Maintain Health (not an exercise)"])
+goal = st.selectbox("Fitness Goal", ["Weight Loss", "Muscle Gain", "Maintain Health"])
 food_allergies = st.selectbox("Food Allergies", ["Sesame", "Peanut", "Gluten", "Soy"])
 diet_restriction = st.selectbox("Diet Restriction", ["Vegetarian", "Paleo", "Vegan", "Lacto-Vegetarian"])
 muscle = st.selectbox("Muscle Target Exercise", ["abdominals", "biceps", "glutes", "lats", "quadriceps"])
@@ -26,10 +27,14 @@ def fetch_nutrition_data(food_allergies, diet_restriction):
     API_ENDPOINT = "https://api.spoonacular.com/mealplanner/generate?timeFrame=day"
     params = {
         "intolerances": food_allergies,
-        "diet": diet_restriction,        
-        "apiKey": os.environ["nutri_key"]
+        "diet": diet_restriction,
+
+        # "apiKey": os.environ["nutri_key"]
+        "apiKey": "2c1437f2604e4a1cb4baa3c1d13516ab"
     }
-    headers = {"Authorization": os.environ["nutri_key"]}
+
+    # headers = {"Authorization": os.environ["nutri_key"]}
+    headers = {"Authorization": "2c1437f2604e4a1cb4baa3c1d13516ab"}
 
     try:
         response = requests.get(API_ENDPOINT, headers=headers, params=params)
@@ -42,8 +47,10 @@ def fetch_nutrition_data(food_allergies, diet_restriction):
 def fetch_workout_data(muscle, difficulty):
     # Construct the API URL based on the given muscle and difficulty
     api_url = f'https://api.api-ninjas.com/v1/exercises?muscle={muscle}&difficulty={difficulty}'
-    api_key = os.environ["workout_key"]
-    
+
+    # api_key = os.environ["workout_key"]
+    api_key = "vaGJGuF87pPY5trluGWJQn8bvtaX2C8g65AiSPF6"
+
     # Make the GET request to the API
     response = requests.get(api_url, headers={'X-Api-Key': api_key})
 
@@ -55,12 +62,13 @@ def fetch_workout_data(muscle, difficulty):
         # Get only the first two exercises using list slicing
         first_three_exercises = exercises[:3]
 
+       
         # Iterate through the first three exercises and print their names
-        for exercise in first_three_exercises:
-            print(exercise['name'])
+        return [exercise['name'] for exercise in first_three_exercises]
+
     else:
         # If the request was not successful, print the error
-        print("Error:", response.status_code, response.text)
+        return f"Error: {response.status_code} {response.text}"
 
 
 # Fetch data and construct prompt
