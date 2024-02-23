@@ -4,6 +4,8 @@
 
 2) Setting up CI/CD pipeline for chatbot app full demo link --> https://www.loom.com/share/369c5bb686ba4a5b96a4ca29c573a335
 
+3) 3) AWS CI CD setup for chatbot app full demo link --> https://www.loom.com/share/50563f050ea641db9704ba202fab6795
+
 ************************************************
 
 Important Notice:
