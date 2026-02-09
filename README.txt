@@ -1,6 +1,6 @@
 ************* RECORDED VIDEO LINKS *************
 
-1) Chatbot app demo and code explamnation link --> https://www.loom.com/share/d1d8013a7d224512bfe80227b36c46fd
+1) Chatbot app demo and code explanation link --> https://www.loom.com/share/d1d8013a7d224512bfe80227b36c46fd
 
 2) Setting up CI/CD pipeline for chatbot app full demo link --> https://www.loom.com/share/369c5bb686ba4a5b96a4ca29c573a335
 
